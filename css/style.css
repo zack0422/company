@@ -1207,6 +1207,18 @@ iframe {
   }
 }
 
+.to-top {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.to-top.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .to-top a {
   display: inline-block;
   width: 60px;
@@ -1214,8 +1226,6 @@ iframe {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .to-top a:hover {
@@ -1224,8 +1234,8 @@ iframe {
 
 @media (max-width: 767px) {
   .to-top a {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     right: 12px;
     bottom: 12px;
   }
