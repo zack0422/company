@@ -917,6 +917,8 @@ iframe {
 @media (max-width: 767px) {
   .form__radio span {
     margin-right: 0;
+    display: block;
+    margin-top: 10px;
   }
 }
 

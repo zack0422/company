@@ -881,6 +881,7 @@ iframe {
 
 .form__radio {
   margin-top: 29px;
+  
 
 
   [type = radio] {
@@ -894,6 +895,8 @@ iframe {
 
     @include mq('sp') {
       margin-right: 0;
+      display: block;
+      margin-top: 10px;
     }
 
     &::before {
