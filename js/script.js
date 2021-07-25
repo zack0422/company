@@ -47,3 +47,13 @@ $(window).on('scroll', function() {
     $('.to-top').removeClass('is-show');
   }
 });
+
+$('.header__nav li a').on('click', function() {
+  $('.header__nav li a').removeClass('is-active');
+  $(this).addClass('is-active');
+});
+
+$('.qa__q').on('click', function() {
+  $(this).next().slideToggle();
+  $(this).children('.qa__icon').toggleClass('is-open');
+});
