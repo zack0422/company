@@ -63,6 +63,9 @@ $('.js-modal-open').on('click', function(e) {
   let target = $(this).data('target');
   $(target).show();
   $('body').addClass('is-fixed')
+  // モーダルが開いたら、bodyにfixedを付与
+  $('body').style.position = 'fixed';
+  $('body').style.top = `-${window.scrollY}px`;
   return false;
 });
 
@@ -71,5 +74,10 @@ $('.js-modal-close').on('click', function(e) {
   let target = $(this).data('target');
   $(target).hide();
   $('body').removeClass('is-fixed')
+  // モーダルが閉じられ時...
+  const top = document.body.style.top;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
   return false;
 });
