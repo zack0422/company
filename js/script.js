@@ -57,3 +57,19 @@ $('.qa__q').on('click', function() {
   $(this).next().slideToggle();
   $(this).children('.qa__icon').toggleClass('is-open');
 });
+
+$('.js-modal-open').on('click', function(e) {
+  e.preventDefault();
+  let target = $(this).data('target');
+  $(target).show();
+  $('body').addClass('is-fixed')
+  return false;
+});
+
+$('.js-modal-close').on('click', function(e) {
+  e.preventDefault();
+  let target = $(this).data('target');
+  $(target).hide();
+  $('body').removeClass('is-fixed')
+  return false;
+});
